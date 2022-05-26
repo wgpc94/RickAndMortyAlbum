@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">RickAndMortyAlbum</string>
+    <string name="app_name">Rick and Morty Album</string>
+    <string name="more_info">about</string>
 </resources>
