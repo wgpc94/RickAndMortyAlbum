@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -13,6 +14,7 @@ import com.example.rickandmortyalbum.R
 import com.example.rickandmortyalbum.model.Episode
 import com.example.rickandmortyalbum.presenter.CharacterPresenter
 import com.example.rickandmortyalbum.model.Character
+import com.squareup.picasso.Picasso
 
 class CharacterFragment : Fragment() {
 
@@ -45,6 +47,7 @@ class CharacterFragment : Fragment() {
     private fun bindCharacter(character: Character, episode: Episode) {
         val view = view
         if (view != null){
+            Picasso.get().load(character.imageUrl).into(view.findViewById<ImageView>(R.id.img_character_detail))
             view.findViewById<TextView>(R.id.name_character_detail).text = character.name
             if (character.type == ""){
                 view.findViewById<TextView>(R.id.response_type).text = character.species
@@ -52,7 +55,7 @@ class CharacterFragment : Fragment() {
                 view.findViewById<TextView>(R.id.response_type).text = character.type
             }
             view.findViewById<TextView>(R.id.response_gender).text = character.gender
-            view.findViewById<TextView>(R.id.response_location).text = character.location?.name
+            view.findViewById<TextView>(R.id.response_location).text = character.location.name
             view.findViewById<TextView>(R.id.name_episode).text = episode.name
             view.findViewById<TextView>(R.id.episode_date).text = episode.date
             view.findViewById<TextView>(R.id.episode_code).text = episode.episodeCode

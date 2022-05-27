@@ -3,11 +3,13 @@ package com.example.rickandmortyalbum.view.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rickandmortyalbum.R
 import com.example.rickandmortyalbum.model.Character
 import com.example.rickandmortyalbum.view.interfaces.OnClickCharacter
+import com.squareup.picasso.Picasso
 
 class CharacterListAdapter(
     private val onClickCharacter: OnClickCharacter
@@ -37,12 +39,12 @@ class CharacterListAdapter(
 
     inner class CharacterListViewHolder(private val view : View) : RecyclerView.ViewHolder(view) {
         fun bind(item: Character) {
-
+            Picasso.get().load(item.imageUrl).into(view.findViewById<ImageView>(R.id.img_character_list))
             view.findViewById<TextView>(R.id.name_character).text = item.name
             view.findViewById<TextView>(R.id.response_status_character).text = item.status
             view.findViewById<TextView>(R.id.response_species_character).text = item.species
-            view.findViewById<TextView>(R.id.response_first_location).text = item.origin?.name
-            view.findViewById<TextView>(R.id.response_last_location).text = item.location?.name
+            view.findViewById<TextView>(R.id.response_first_location).text = item.origin.name
+            view.findViewById<TextView>(R.id.response_last_location).text = item.location.name
             view.setOnClickListener {
                 onClickCharacter.onClickCharacter(item.id)
             }

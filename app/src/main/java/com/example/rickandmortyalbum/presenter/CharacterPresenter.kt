@@ -1,6 +1,6 @@
 package com.example.rickandmortyalbum.presenter
 
-import com.example.rickandmortyalbum.data.DataSource
+import com.example.rickandmortyalbum.data.RemoteDataSource
 import com.example.rickandmortyalbum.model.Character
 import com.example.rickandmortyalbum.model.Episode
 import com.example.rickandmortyalbum.view.CharacterFragment
@@ -11,7 +11,7 @@ class CharacterPresenter(
     private val view : CharacterFragment
 ) : CharacterCallBack {
 
-    private val dataSource = DataSource()
+    private val dataSource = RemoteDataSource()
 
     fun findBy(characterId: Int) {
         view.showProgress()

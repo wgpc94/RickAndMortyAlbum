@@ -1,8 +1,9 @@
 package com.example.rickandmortyalbum.view.interfaces
 
-import com.example.rickandmortyalbum.model.Character
+import com.example.rickandmortyalbum.model.InfoAndResult
+
 interface CharacterListCallBack {
-    fun onSuccess(characterList: MutableList<Character>)
+    fun onSuccess(iAR : InfoAndResult)
     fun onCompleted()
     fun onError(msg : String)
 }
