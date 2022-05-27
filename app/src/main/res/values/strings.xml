@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Rick and Morty Album</string>
+    <string name="image_character">image_character</string>
     <string name="more_info">about</string>
+    <string name="menu_text">menu_text</string>
+    <string name="character_image">character image</string>
+    <string name="name">Name</string>
+    <string name="species">Species</string>
+    <string name="status">Status</string>
+    <string name="origin">Origin</string>
+    <string name="location">Location</string>
+    <string name="created">Created</string>
+    <string name="first_location">First location</string>
+    <string name="last_location">Last location</string>
+    <string name="response_first_location">response_first_location</string>
+    <string name="response_last_location">response_last_location</string>
+    <string name="type">Type</string>
+    <string name="response_type">response_type</string>
+    <string name="gender">Gender</string>
+    <string name="response_gender">response_gender</string>
+    <string name="episode">Premiere episode</string>
+    <string name="date">date</string>
+    <string name="rick_and_morty_image">rick and morty image</string>
+    <string name="episode_code">episode code</string>
+    <string name="count">1</string>
 </resources>

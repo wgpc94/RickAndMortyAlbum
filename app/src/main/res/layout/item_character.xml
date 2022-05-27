@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_character"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="15dp"
+    android:backgroundTint="@color/green"
+    android:layout_gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_character_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="w,5,5:4"
+            android:src="@color/grey"
+            android:contentDescription="@string/image_character"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/name_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            app:layout_constraintTop_toBottomOf="@id/img_character_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/status_character"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/status_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textColor="@color/white"
+            style="@style/textview_default_style"
+            app:layout_constraintTop_toBottomOf="@id/name_character"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <TextView
+            android:id="@+id/response_status_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            style="@style/textview_default_style"
+            app:layout_constraintTop_toBottomOf="@id/name_character"
+            app:layout_constraintStart_toEndOf="@id/status_character"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/species_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/species"
+            android:textColor="@color/white"
+            style="@style/textview_default_style"
+            app:layout_constraintTop_toBottomOf="@id/status_character"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <TextView
+            android:id="@+id/response_species_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/species"
+            style="@style/textview_default_style"
+            app:layout_constraintTop_toBottomOf="@id/status_character"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/species_character"
+            />
+
+        <TextView
+            android:id="@+id/first_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_location"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/response_species_character"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           style="@style/textview_default_style"
+            />
+
+        <TextView
+            android:id="@+id/response_first_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/response_first_location"
+            app:layout_constraintTop_toBottomOf="@id/first_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/last_location"
+            style="@style/textview_default_style"
+            />
+
+        <TextView
+            android:id="@+id/last_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_location"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/response_first_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/textview_default_style"
+            />
+
+        <TextView
+            android:id="@+id/response_last_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/response_last_location"
+            app:layout_constraintTop_toBottomOf="@id/last_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/textview_default_style"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
